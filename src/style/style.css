@@ -1,0 +1,144 @@
+:root{
+    /* Colors */
+    /* Primary */
+    --Purple600: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --selfCare: hsl(43, 84%, 65%);
+    /* ### Neutral */
+    --Navy950: hsl(226, 43%, 10%);
+    --Navy900: hsl(235, 46%, 20%);
+    --Purple500: hsl(235, 45%, 61%);
+    --Navy200: hsl(236, 100%, 87%);
+    /* Weights */
+    --Weight300: 300;
+    --Weight400: 400;
+    --Weight500: 500;
+}
+body{
+    background-color: var(--Navy950);
+}
+
+.user{
+    background-color: var(--Purple600);
+    border-radius: 1em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.image{
+    width: 4em;
+    height: 4em;
+}
+.image img{
+    width: inherit;
+    height: inherit;
+    display: block;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.navigation{
+    border-radius: 1em;
+}
+.navigation li{
+    list-style-type: none;
+}
+
+/* fonts */
+.intro div>p{
+    color: var(--Navy200);
+    opacity: 0.6;
+    font-weight: var(--Weight300);
+    font-size: 0.9rem;
+}
+.intro div>h1{
+    color: var(--Navy200);
+    font-weight: var(--Weight300);
+    font-size: 1.8rem;
+}
+.navigation>li>button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: var(--Navy900);
+    width: var(--Weight500);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.options p{
+    color: white;
+    font-weight: var(--Weight400);
+    font-size: 1.1rem;
+}
+.options button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.time>p:nth-child(1){
+    color: white;
+    font-weight: var(--Weight300);
+    font-size: 1.9rem;
+}
+.time>p:nth-child(2){
+    color: var(--Navy200);
+    font-weight: var(--Weight400);
+    font-size: 0.9rem;
+}
+
+/* card border style */
+.card{
+    background-color: var(--Navy900);
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    min-height: 140px;
+    transition: background-color 0.5s linear;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: right 1em top 0.3em;
+    background-size: 3.2em;
+}
+.card.work::before {
+    background-color: var(--work);
+    background-image: url('../assets/images/icon-work.svg');
+}
+
+.card.play::before {
+    background-color: var(--play);
+    background-image: url('../assets/images/icon-play.svg');
+}
+
+.card.study::before {
+    background-color: var(--study);
+    background-image: url('../assets/images/icon-study.svg');
+}
+
+.card.exercise::before {
+    background-color: var(--exercise);
+    background-image: url('../assets/images/icon-exercise.svg');
+}
+
+.card.social::before {
+    background-color: var(--social);
+    background-image: url('../assets/images/icon-social.svg');
+}
+
+.card.self-care::before {
+    background-color: var(--selfCare);
+    background-image: url('../assets/images/icon-self-care.svg');
+}
+
+@media screen and (min-width:60em) {
+    
+}
